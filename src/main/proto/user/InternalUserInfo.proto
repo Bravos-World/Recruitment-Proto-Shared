@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package user;
+
+option java_multiple_files = true;
+option java_package = "com.bravos.recruitment.proto.user";
+option java_outer_classname = "UserProto";
+
+message GetInternalUserInfoRequest {
+  oneof identifier {
+    int64 id = 1;
+    string username = 2;
+    string email = 3;
+  }
+}
+
+message GetInternalUserInfoResponse {
+  int64 id = 1;
+  string username = 2;
+  string email = 3;
+  string firstName = 4;
+  string lastName = 5;
+  bool enabled = 6;
+  int64 createdAt = 7;
+  bool found = 8;
+  string message = 9;
+}
+
+service InternalUserInfoService {
+  rpc GetInternalUserInfo(GetInternalUserInfoRequest) returns (GetInternalUserInfoResponse);
+}
