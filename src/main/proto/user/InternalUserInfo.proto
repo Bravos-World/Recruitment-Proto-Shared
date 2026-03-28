@@ -12,6 +12,7 @@ message GetInternalUserInfoRequest {
     string username = 2;
     string email = 3;
   }
+  string userType = 4; // CANDIDATE, STAFF
 }
 
 message GetInternalUserInfoResponse {
