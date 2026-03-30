@@ -27,6 +27,17 @@ message GetInternalUserInfoResponse {
   string message = 9;
 }
 
+message GetUserPermissionsRequest {
+  string username = 1;
+  string userType = 2; // CANDIDATE, STAFF
+}
+
+message GetUserPermissionsResponse {
+  // Set semantics are represented as a repeated field in proto3.
+  repeated string permissions = 1;
+}
+
 service InternalUserInfoService {
   rpc GetInternalUserInfo(GetInternalUserInfoRequest) returns (GetInternalUserInfoResponse);
+  rpc GetUserPermissions(GetUserPermissionsRequest) returns (GetUserPermissionsResponse);
 }

@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "com.bravos.recruitment"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     mavenCentral()
@@ -16,7 +16,7 @@ repositories {
 
 protobuf {
     protoc {
-        artifact = "com.google.protobuf:protoc:4.34.0"
+        artifact = "com.google.protobuf:protoc:4.34.1"
     }
     plugins {
         id("grpc") {
