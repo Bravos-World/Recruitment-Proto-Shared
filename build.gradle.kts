@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "com.bravos.recruitment"
-version = "1.0.1"
+version = "1.0.2"
 
 repositories {
     mavenCentral()
@@ -40,7 +40,7 @@ java {
 }
 
 dependencies {
-    api("com.google.protobuf:protobuf-java:4.34.0")
+    api("com.google.protobuf:protobuf-java:4.34.1")
     api("io.grpc:grpc-protobuf:1.80.0")
     api("io.grpc:grpc-stub:1.80.0")
 }
